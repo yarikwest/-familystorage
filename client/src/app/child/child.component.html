@@ -1,0 +1,67 @@
+<div class="ekran2">
+  <h5>ADD CHILD</h5>
+
+
+  <div>
+    <div class="row">
+      <form class="col s12" (ngSubmit)="addChildToFamily(); childForm.reset()" #childForm="ngForm">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" name="firstName" [(ngModel)]="child.firstName" required autocomplete="off" pattern="[^\s]\D*">
+            <label for="first_name">First Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="last_name" type="text" class="validate" name="lastName" [(ngModel)]="child.lastName" required autocomplete="off" pattern="[^\s]\D*">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="pesel" type="text" class="validate" name="pesel" [(ngModel)]="child.pesel" required autocomplete="off" pattern="[0-9]{11}">
+            <label for="pesel">PESEL</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="birthDate" type="date" class="validate" name="date" [(ngModel)]="child.birthDate" required autocomplete="off">
+            <label for="birthDate">Birthday</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="sex" type="text" class="validate" name="sex" [(ngModel)]="child.sex" required autocomplete="off" pattern="[MF]">
+            <label for="sex">Sex (enter M(male) or F(female))</label>
+          </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit" [disabled]="childForm.form.invalid">Add child
+        </button>
+      </form>
+    </div>
+
+    <h6>Children:</h6>
+    <table class="striped">
+      <thead>
+      <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>pesel</th>
+        <th>birthDate</th>
+        <th>sex</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let child of children">
+        <td>{{child.firstName}}</td>
+        <td>{{child.lastName}}</td>
+        <td>{{child.pesel}}</td>
+        <td>{{child.birthDate | date:"dd/MM/yyyy"}}</td>
+        <td>{{child.sex}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

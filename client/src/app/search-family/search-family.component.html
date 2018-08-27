@@ -1,0 +1,3 @@
+<app-search-child (onFathers)="onFathers($event)"></app-search-child>
+<app-search-result [fathers]="fathers" *ngIf="showSearchResult" (findSelectedFamily)="findSelectedFamily($event)"></app-search-result>
+<app-read-family></app-read-family>

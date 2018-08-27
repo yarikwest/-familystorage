@@ -1,0 +1,6 @@
+<div *ngIf="showFormFamily">
+  <app-father *ngIf="showFormFather" [family]="family" (addFather)="hiddenFatherForm()"></app-father>
+  <app-child *ngIf="showFormChild" [family]="family" (disableSaveFamily)="disableSaveFamily()"></app-child>
+
+</div>
+<button [disabled]="disableButtonSaveFamily" class="waves-effect waves-light btn" *ngIf="showFormChild" (click)="onReadFamily()">SAVE FAMILY</button>

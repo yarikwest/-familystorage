@@ -1,0 +1,20 @@
+div {
+  display: flex;
+
+}
+app-menu{
+  border: 1px solid gainsboro;
+  margin: 1vh;
+  padding: 5px;
+  width: 30%;
+  height: 98vh;
+}
+
+app-table{
+  width: 70%;
+  border: 1px solid gainsboro;
+  margin: 1vh;
+  padding: 5px;
+}
+
+

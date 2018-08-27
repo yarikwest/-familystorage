@@ -1,0 +1,21 @@
+<div class="mytab">
+  <h4>Fathers:</h4>
+  <table class="highlight">
+    <thead>
+    <tr>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>pesel</th>
+      <th>birthDate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let father of fathers" (click)="showSelectedRow(father.family.id)" >
+      <td>{{father.firstName}}</td>
+      <td>{{father.lastName}}</td>
+      <td>{{father.pesel}}</td>
+      <td>{{father.birthDate | date:"dd/MM/yyyy"}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

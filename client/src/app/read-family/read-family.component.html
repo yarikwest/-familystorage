@@ -1,0 +1,50 @@
+<div *ngIf="showReadFamily">
+
+  <div class="mytab">
+    <h4>Father:</h4>
+    <table class="striped">
+      <thead>
+      <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>pesel</th>
+        <th>birthDate</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="familyArray.length > 0">
+        <td>{{familyArray[0].firstName}}</td>
+        <td>{{familyArray[0].lastName}}</td>
+        <td>{{familyArray[0].pesel}}</td>
+        <td>{{familyArray[0].birthDate | date:"dd/MM/yyyy"}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mytab">
+    <h4>Children:</h4>
+    <table class="striped">
+      <thead>
+      <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>pesel</th>
+        <th>birthDate</th>
+        <th>sex</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let child of familyArray[1]">
+        <td>{{child.firstName}}</td>
+        <td>{{child.lastName}}</td>
+        <td>{{child.pesel}}</td>
+        <td>{{child.birthDate | date:"dd/MM/yyyy"}}</td>
+        <td>{{child.sex}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

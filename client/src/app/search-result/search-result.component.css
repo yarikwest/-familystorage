@@ -1,0 +1,9 @@
+.mytab {
+  border: 1px solid cadetblue;
+  margin: 20px;
+  padding: 20px;
+}
+
+h4 {
+  border-bottom: 1px solid cadetblue;
+}
