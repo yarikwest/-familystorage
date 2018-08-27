@@ -11,7 +11,6 @@
 * [Maven](http://maven.apache.org/)
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
-* ...
 
 ## Deploy
 
@@ -25,7 +24,7 @@ docker pull yarikwest/familystorage-server
 docker pull yarikwest/familystorage-client
 
 # run the containers
-docker run --name db -e MYSQL_ROOT_PASSWORD=root mysql:5
+docker run --name db --env="MYSQL_ROOT_PASSWORD=root" --env="MYSQL_DATABASE=familyDB" mysql:5
 docker run --name server --link db:db yarikwest/familystorage-server
 docker run --name client --link server:server -p 4200:4200 yarikwest/familystorage-client
 
