@@ -10,7 +10,6 @@
 * [MySQL](https://www.mysql.com/)
 * [Maven](http://maven.apache.org/)
 * [Docker](https://www.docker.com/)
-* [Docker Compose](https://docs.docker.com/compose/)
 
 
 ## Deploy
@@ -28,8 +27,5 @@ docker pull yarikwest/familystorage-client
 docker run -d --name db -p 33060:3306 --env="MYSQL_ROOT_PASSWORD=root" --env="MYSQL_DATABASE=familyDB" mysql:5
 docker run --name server --network host yarikwest/familystorage-server
 docker run -d --name client -p 4200:4200 yarikwest/familystorage-client
-
-# or just use docker-compose running
-docker-compose up
 
 ```
