@@ -76,7 +76,7 @@
           <repository>${docker.image.prefix}/${project.artifactId}</repository>
           <buildArgs>
             <NGINX_FILE>nginx.conf</NGINX_FILE>
-            <DIST>dist/my-app</DIST>
+            <DIST>dist/client</DIST>
           </buildArgs>
         </configuration>
       </plugin>
