@@ -29,3 +29,5 @@ docker run --name server --network host yarikwest/familystorage-server
 docker run -d --name client -p 4200:4200 yarikwest/familystorage-client
 
 ```
+## Start
+Przejść do aplikacji można pod adressem http://localhost:4200
